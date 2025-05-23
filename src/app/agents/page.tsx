@@ -15,7 +15,7 @@ export default function Agent() {
   const handleSubmit = async () => {
     setLoading(true);
     const res = await fetch(
-      "https://open-ai-yt-script-fastapi-backend.up.railway.app",
+      "https://open-ai-yt-script-fastapi-backen.railway.internal",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
