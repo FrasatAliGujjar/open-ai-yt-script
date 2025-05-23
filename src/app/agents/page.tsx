@@ -14,11 +14,14 @@ export default function Agent() {
 
   const handleSubmit = async () => {
     setLoading(true);
-    const res = await fetch("http://localhost:8000/summarize", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ url }),
-    });
+    const res = await fetch(
+      "https://open-ai-yt-script-fastapi-backend.up.railway.app",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ url }),
+      }
+    );
     const data = await res.json();
     setResult(data);
     setLoading(false);
